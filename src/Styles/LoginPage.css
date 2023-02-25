@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* Aggiunge lo sfondo notturno alla classe body */
+.night-mode {
+  background-color: #1a1a1a;
+}
+
+.mode-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  /* Modifica lo stile del bottone in modalità notturna */
+}
+.mode-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+.night-mode .mode-button {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.night-mode .mode-button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.input-img-container {
+  display: flex;
+}
+
+@keyframes transitionImage {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: transitionImage 8s ease-in-out infinite;
+}
+
+.n1 {
+  animation-delay: 0;
+}
+
+.n2 {
+  animation-delay: 3s;
+}
+
+.n3 {
+  animation-delay: 3s;
+}/*# sourceMappingURL=LoginPage.css.map */
