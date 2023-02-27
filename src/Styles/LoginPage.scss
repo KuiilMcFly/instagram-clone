@@ -47,12 +47,21 @@
 .relative {
   position: relative;
 }
+
 .absolute {
   position: absolute;
-  top: 50%;
-  left: 50%;
+}
+
+.img-container {
+  max-width: 200px;
+  max-height: 541px;
+}
+
+
+.img-animation {
   animation: transitionImage 8s ease-in-out infinite;
 }
+
 .n1 {
   animation-delay: 0;
 }
@@ -67,9 +76,14 @@
   display: flex;
   justify-content: space-around;
   margin: 200px 300px;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   
+}
+
+.phonecontainer{
+top: 8.3%;
+left: 64.2%;
 }
 
 form {
@@ -83,3 +97,4 @@ form {
    border: 1px solid white;
    padding: 50px;
 }
+

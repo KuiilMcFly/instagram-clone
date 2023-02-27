@@ -4,7 +4,7 @@ import phones from "../assets/phones.png";
 import screenshot1 from "../assets/screenshot1.png";
 import screenshot2 from "../assets/screenshot2.png";
 import screenshot3 from "../assets/screenshot3.png";
-import instagramlogo from '../assets/instagramlogo.png';
+import instagramlogo from "../assets/instagramlogo.png";
 import LoginInput from "../components/LoginInput";
 
 const LoginPage = () => {
@@ -20,19 +20,24 @@ const LoginPage = () => {
       <button className="mode-button" onClick={toggleNightMode}>
         Switch to {isNightMode ? "day" : "night"} mode
       </button>
-        <div className="login-container">
-          <div className="input-img-container relative">
-            <img src={screenshot1} className="absolute n1" alt="" />
-            <img src={screenshot2} className="absolute n2" />
-            <img src={screenshot3} className="absolute n3" />
+      <div className="login-container">
+        <div className="relative img-container">
+          <div className="relative">
+          <img src={phones} className="" alt="" />
           </div>
-          <div>
-            <form>
-              <img src={instagramlogo} alt="" />
-                <LoginInput/>
-            </form>
+          <div className="absolute phonecontainer">
+            <img src={screenshot1} className="img-animation n1 absolute" alt="" />
+            <img src={screenshot2} className="img-animation n2 absolute" />
+            <img src={screenshot3} className="img-animation n3 absolute" />
           </div>
         </div>
+        <div>
+          <form>
+            <img src={instagramlogo} alt="" />
+            <LoginInput />
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

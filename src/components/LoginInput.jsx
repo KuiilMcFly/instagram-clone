@@ -24,7 +24,7 @@ const LoginInput = () => {
             <p>Accedi con Facebook</p>
         </div>
 
-        
+        <p>Password dimenticata?</p>
     </div>
     )
 }
