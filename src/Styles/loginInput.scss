@@ -1,0 +1,42 @@
+.input-box {
+    div {
+        margin-bottom: 10px;
+        input {
+            width: 268px;
+            height: 38px;
+        }
+    }
+
+    button {
+        width: 268px;
+        height: 32px;
+        border-radius: 10px;
+        background-color: #1877F2;
+        color: white;
+    }
+    .border-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .border {
+            border-top: solid 1px gray;
+            width: 100px;
+        }
+        div {
+            p {
+                color: white;
+            }
+        }
+    }
+
+    .facebook-login {
+        display: flex;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 30px;
+        }
+    }
+}
