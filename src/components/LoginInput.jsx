@@ -1,7 +1,10 @@
-import '../Styles/loginInput.css'
-import facebookIcon from '../assets/facebook.png'
+import '../Styles/loginInput.css';
+import facebookIcon from '../assets/facebook.png';
+import instagramlogo from "../assets/instagramlogo.png";
 const LoginInput = () => {
     return(
+        <form>
+            <img src={instagramlogo} alt="" />
     <div className="input-box">
         <div>
             <input type="email" autoComplete='username' placeholder='Numero di telefono, nome utente o e-mail' />
@@ -26,6 +29,7 @@ const LoginInput = () => {
 
         <p>Password dimenticata?</p>
     </div>
+    </form>
     )
 }
 

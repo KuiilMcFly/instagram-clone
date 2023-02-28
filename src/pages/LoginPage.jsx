@@ -4,7 +4,9 @@ import phones from "../assets/phones.png";
 import screenshot1 from "../assets/screenshot1.png";
 import screenshot2 from "../assets/screenshot2.png";
 import screenshot3 from "../assets/screenshot3.png";
-import instagramlogo from "../assets/instagramlogo.png";
+import googlePlay from "../assets/googleplay.png"
+import microsoftStore from "../assets/microsoft.png"
+
 import LoginInput from "../components/LoginInput";
 
 const LoginPage = () => {
@@ -32,10 +34,17 @@ const LoginPage = () => {
           </div>
         </div>
         <div>
-          <form>
-            <img src={instagramlogo} alt="" />
             <LoginInput />
-          </form>
+            <div className="no-account-box">
+                <p>Non hai un account? Iscriviti</p>
+            </div>
+            <div className="download-app">
+                <p>Scarica l'applicazione</p>
+                <div className="download-selector">
+                    <img src={googlePlay} alt="" style={{width:'150px'}}/>
+                    <img src={microsoftStore} alt="" style={{width:'124px'}}/>
+                </div>
+            </div>
         </div>
       </div>
     </div>
