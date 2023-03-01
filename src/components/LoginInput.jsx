@@ -3,21 +3,24 @@ import facebookIcon from '../assets/facebook.png';
 import instagramlogo from "../assets/instagramlogo.png";
 import { Link } from 'react-router-dom';
 import Home from "../pages/Home";
-const LoginInput = () => {
+
+                            
+const LoginInput = ({handleEmail, handlePassword, handleSubmit, email, password}) => {
+    
     return(
         <form>
             <img src={instagramlogo} alt="" />
     <div className="input-box">
         <div>
-            <input type="email" autoComplete='username' placeholder='Numero di telefono, nome utente o e-mail' />
+            <input value={email} onChange={handleEmail} type="email" autoComplete='username' placeholder='Numero di telefono, nome utente o e-mail' />
         </div>
 
         <div>
-            <input type="password" autoComplete='current-password' placeholder='Password' />
+            <input value={password} onChange={handlePassword} type="password" autoComplete='current-password' placeholder='Password' />
         </div>
-        <Link to={{pathname: "../pages/Home.jsx"}}>
-            <button>Accedi</button>
-        </Link>
+        
+            <button onClick={handleSubmit}>Accedi</button>
+        
 
         <div className='border-container'>
             <div className='border'></div>

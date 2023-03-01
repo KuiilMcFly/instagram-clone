@@ -2,7 +2,9 @@ import instagramLogo from "../assets/instagramlogo.png"
 const Home = () => {
     return(
         <div>
-            <img src={instagramLogo} alt="" />
+            <div className="left-bar">
+                <img src={instagramLogo} alt="" />
+            </div>
         </div>
     )
 }

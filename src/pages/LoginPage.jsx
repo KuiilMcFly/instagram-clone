@@ -6,12 +6,35 @@ import screenshot2 from "../assets/screenshot2.png";
 import screenshot3 from "../assets/screenshot3.png";
 import googlePlay from "../assets/googleplay.png"
 import microsoftStore from "../assets/microsoft.png"
-
 import LoginInput from "../components/LoginInput";
 
-const LoginPage = () => {
-  const [isNightMode, setIsNightMode] = useState(false);
 
+const LoginPage = () => {
+
+  const [isNightMode, setIsNightMode] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSignup, setIsSignup] = useState("");
+
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(email, password);
+    setEmail("");
+    setPassword("");
+}
+
+
+
+  //Impostare la modalità notte e modalità giorno
   const toggleNightMode = () => {
     setIsNightMode(!isNightMode);
     document.body.classList.toggle("night-mode");
@@ -19,7 +42,8 @@ const LoginPage = () => {
 
   return (
     <div>
-      <button className="mode-button" onClick={toggleNightMode}>
+   <button className={`mode-button ${isNightMode ? 'day-btn' : 'night-btn'}`} onClick={toggleNightMode}>
+
         Switch to {isNightMode ? "day" : "night"} mode
       </button>
       <div className="login-container">
@@ -34,7 +58,13 @@ const LoginPage = () => {
           </div>
         </div>
         <div>
-            <LoginInput />
+            <LoginInput 
+              handleEmail={handleEmail}
+              handlePassword={handlePassword}
+              handleSubmit={handleSubmit}
+              email={email}
+              password={password}
+             />
             <div className="no-account-box">
                 <p>Non hai un account? Iscriviti</p>
             </div>

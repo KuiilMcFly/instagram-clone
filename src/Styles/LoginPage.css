@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Aggiunge lo sfondo notturno alla classe body */
 .night-mode {
   background-color: #1a1a1a;
@@ -8,23 +7,18 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #fff;
-  color: #333;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  /* Modifica lo stile del bottone in modalità notturna */
 }
-.mode-button:hover {
-  background-color: #333;
-  color: #fff;
-}
-.night-mode .mode-button {
+
+.night-btn {
   background-color: #1a1a1a;
   color: #fff;
 }
-.night-mode .mode-button:hover {
+
+.day-btn {
   background-color: #fff;
   color: #333;
 }
