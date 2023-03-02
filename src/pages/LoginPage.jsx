@@ -14,8 +14,17 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleEmail = (e) =>{
+    setEmail(e.target.value);
+  }
+  const handlePassword = (e) =>{
+    setPassword(e.target.value);
+  }
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('Email e Password', email, password);
     setEmail("");
     setPassword("");
   };
@@ -45,8 +54,8 @@ const LoginPage = () => {
 
         <div className={isNightMode ? 'text-night' : 'text-day'}>
           <LoginInput
-            setEmail={setEmail}
-            setPassword={setPassword}
+            handleEmail={handleEmail}
+            handlePassword={handlePassword}
             handleSubmit={handleSubmit}
             email={email}
             password={password}
