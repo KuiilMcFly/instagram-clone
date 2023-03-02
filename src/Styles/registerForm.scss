@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    div {
+        gap: 15px;
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+        
+        button {
+            img {
+                width: 20px;
+            }
+        }
+    }
+}

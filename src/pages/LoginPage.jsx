@@ -8,6 +8,7 @@ import googlePlay from "../assets/googleplay.png";
 import microsoftStore from "../assets/microsoft.png";
 import LoginInput from "../components/LoginInput";
 import facebookIcon from '../assets/facebook.png';
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const [isNightMode, setIsNightMode] = useState(false);
@@ -68,7 +69,7 @@ const LoginPage = () => {
 
         <p>Password dimenticata?</p>
         
-            <p >Non hai un account? Iscriviti</p>
+            <p>Non hai un account?<Link to="/pages/Register.jsx">Iscriviti</Link></p>
           </div>
           <div className="download-app ">
             <p>Scarica l'applicazione</p>
