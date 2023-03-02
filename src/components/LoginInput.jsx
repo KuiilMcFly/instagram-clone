@@ -1,5 +1,5 @@
 import '../Styles/loginInput.css';
-import facebookIcon from '../assets/facebook.png';
+
 import instagramlogo from "../assets/instagramlogo.png";
 import { Link } from 'react-router-dom';
 import Home from "../pages/Home";
@@ -28,12 +28,7 @@ const LoginInput = ({handleEmail, handlePassword, handleSubmit, email, password}
             <div className='border'></div>
         </div>
         
-        <div className='facebook-login'>
-            <img src={facebookIcon} alt="" />
-            <p>Accedi con Facebook</p>
-        </div>
-
-        <p>Password dimenticata?</p>
+    
     </div>
     </form>
     )
