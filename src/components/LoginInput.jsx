@@ -8,7 +8,7 @@ import Home from "../pages/Home";
 const LoginInput = ({handleEmail, handlePassword, handleSubmit, email, password}) => {
     
     return(
-        <form>
+        <form onSubmit={handleSubmit}>
             <img src={instagramlogo} alt="" />
     <div className="input-box">
         <div>

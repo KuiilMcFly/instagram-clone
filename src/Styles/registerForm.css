@@ -11,4 +11,7 @@
 }
 .container div button img {
   width: 20px;
+}
+.container div .register-inputs input {
+  height: 32px;
 }/*# sourceMappingURL=registerForm.css.map */

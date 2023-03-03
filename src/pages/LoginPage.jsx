@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Styles/LoginPage.scss";
 import phones from "../assets/phones.png";
 import screenshot1 from "../assets/screenshot1.png";
@@ -7,27 +7,51 @@ import screenshot3 from "../assets/screenshot3.png";
 import googlePlay from "../assets/googleplay.png";
 import microsoftStore from "../assets/microsoft.png";
 import LoginInput from "../components/LoginInput";
-import facebookIcon from '../assets/facebook.png';
-import { Link } from "react-router-dom";
+import facebookIcon from "../assets/facebook.png";
+import { Link, redirect, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { auth } from "../store/actions/handleAuth";
 
 const LoginPage = () => {
+  const Navigate = useNavigate();
   const [isNightMode, setIsNightMode] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isSignup, setIsSignup] = useState(true);
+  const [error, setError] = useState("");
+  const [isValid, setIsValid] = useState(false);
+  const dispatch = useDispatch();
 
-  const handleEmail = (e) =>{
+  const handleEmail = (e) => {
     setEmail(e.target.value);
-  }
-  const handlePassword = (e) =>{
+  };
+  const handlePassword = (e) => {
     setPassword(e.target.value);
-  }
+  };
 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token && isValid) {
+      Navigate("/home");
+    }
+  }, [isValid]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Email e Password', email, password);
-    setEmail("");
-    setPassword("");
+    if (!email || !password) {
+      setError("Inserisci email e password");
+    } else {
+      dispatch(auth(email, password, false))
+        .then(() => {
+          setIsValid(true);
+          setEmail("");
+          setPassword("");
+          setError("");
+        })
+        .catch(() => {
+          setError("Credenziali non valide");
+        });
+    }
   };
 
   const toggleNightMode = () => {
@@ -53,7 +77,7 @@ const LoginPage = () => {
           <img src={phones} className="" alt="" />
         </div>
 
-        <div className={isNightMode ? 'text-night' : 'text-day'}>
+        <div className={isNightMode ? "text-night" : "text-day"}>
           <LoginInput
             handleEmail={handleEmail}
             handlePassword={handlePassword}
@@ -62,14 +86,19 @@ const LoginPage = () => {
             password={password}
           />
           <div>
-          <div className='facebook-login'>
-            <img src={facebookIcon} alt="" />
-            <p className={isNightMode ? 'text-night' : 'text-day'}>Accedi con Facebook</p>
-        </div>
+            <div className="facebook-login">
+              <img src={facebookIcon} alt="" />
+              <p className={isNightMode ? "text-night" : "text-day"}>
+                Accedi con Facebook
+              </p>
+            </div>
 
-        <p>Password dimenticata?</p>
-        
-            <p>Non hai un account?<Link to="/pages/Register.jsx">Iscriviti</Link></p>
+            <p>Password dimenticata?</p>
+
+            {error && <p>Password non valida</p>}
+            <p>
+              Non hai un account?<Link to="/register">Iscriviti</Link>
+            </p>
           </div>
           <div className="download-app ">
             <p>Scarica l'applicazione</p>
