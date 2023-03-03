@@ -14,12 +14,13 @@ import { auth } from "../store/actions/handleAuth";
 
 const LoginPage = () => {
   const Navigate = useNavigate();
+  let token = localStorage.getItem("token");
+
   const [isNightMode, setIsNightMode] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSignup, setIsSignup] = useState(true);
-  const [error, setError] = useState("");
-  const [isValid, setIsValid] = useState(false);
+  const [error, setError] = useState(false);
   const dispatch = useDispatch();
 
   const handleEmail = (e) => {
@@ -29,30 +30,25 @@ const LoginPage = () => {
     setPassword(e.target.value);
   };
 
+
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token && isValid) {
+    if (token) {
       Navigate("/home");
     }
-  }, [isValid]);
+  }, [token]);
 
-  const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
+  try {
     e.preventDefault();
-    if (!email || !password) {
-      setError("Inserisci email e password");
-    } else {
-      dispatch(auth(email, password, false))
-        .then(() => {
-          setIsValid(true);
-          setEmail("");
-          setPassword("");
-          setError("");
-        })
-        .catch(() => {
-          setError("Credenziali non valide");
-        });
-    }
-  };
+    dispatch(auth(email, password, false));
+    setEmail("");
+    setPassword("");
+    
+  } catch (error) {
+    console.log(error)
+    setError(true);
+  }
+};
 
   const toggleNightMode = () => {
     setIsNightMode(!isNightMode);
