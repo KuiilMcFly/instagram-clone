@@ -1,0 +1,18 @@
+.right-bar {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.profile-space {
+  display: flex;
+}
+.profile-space img {
+  border-radius: 100%;
+  width: 55px;
+}
+
+.name-nickname {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=homerRightBar.css.map */

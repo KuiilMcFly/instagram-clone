@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 30px;
     border: solid 1px black;
+    padding-right: 150px;
     .insta-logo{
         width: 150px;
     }
@@ -12,7 +13,6 @@
         color: black;
         font-size: 21px;
         display: flex;
-
         gap: 8px;
         align-items: center;
     }
