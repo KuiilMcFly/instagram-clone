@@ -3,7 +3,7 @@ import Stories from '../components/stories';
 import HomeLeftBar from '../components/HomeLeftBar';
 const Home = () => {
     return(
-        <div>
+        <div className='home-structure'>
             <HomeLeftBar/>
             <Stories/>
         </div>

@@ -1,15 +1,14 @@
-import React from 'react'
 import '../Styles/homeLeftBar.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import instagramLogo from '../assets/Instagram_logo.svg';
-
+import {AiFillHome} from 'react-icons/ai';
+import {BsSearch} from 'react-icons/bs';
 const HomeLeftBar = () => {
   return ( 
     <div className="left-bar">
         <img className='insta-logo' src={instagramLogo} alt="" />
-            <Link>Home</Link>
-            <Link>Cerca</Link>
+            <Link><AiFillHome/> Home</Link>
+            <Link><BsSearch/>Cerca</Link>
             <Link>Esplora</Link>
             <Link>Reels</Link>
             <Link>Messaggi</Link>

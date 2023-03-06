@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  border: solid 1px black;
 }
 .left-bar .insta-logo {
   width: 150px;
@@ -11,6 +12,9 @@
   text-decoration: none;
   color: black;
   font-size: 21px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 .left-bar h3 {
   margin-top: 400px;

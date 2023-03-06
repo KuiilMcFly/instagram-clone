@@ -1,3 +1,11 @@
+body.night-mode div, body.night-mode p, body.night-mode a, body.night-mode h3 {
+  color: #fff;
+}
+
+body.night-mode img.insta-logo {
+  filter: invert(1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -165,4 +173,12 @@ body {
 
 .text-night {
   color: #fff;
+}
+
+.insta-logo {
+  width: 200px;
+}
+
+.logo-night {
+  filter: invert(1);
 }/*# sourceMappingURL=LoginPage.css.map */

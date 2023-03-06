@@ -8,7 +8,6 @@ const LoginInput = ({handleEmail, handlePassword, handleSubmit, email, password}
     
     return(
         <form onSubmit={handleSubmit}>
-            <img className='insta-logo' src={instragramLogo} alt="" />
     <div className="input-box">
         <div>
             <input value={email} onChange={handleEmail} type="email" autoComplete='username' placeholder='Numero di telefono, nome utente o e-mail' />

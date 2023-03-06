@@ -11,9 +11,11 @@ import facebookIcon from "../assets/facebook.png";
 import { Link, redirect, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { auth } from "../store/actions/handleAuth";
+import instaLogo from '../assets/Instagram_logo.svg'
 
 const LoginPage = () => {
   const Navigate = useNavigate();
+  
   const token = useSelector(state => state.authReducer.token);
 
   const [isNightMode, setIsNightMode] = useState(false);
@@ -33,7 +35,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (token) {
-      Navigate("/home");
+     Navigate("/home"); 
     }
   }, [token]);
 
@@ -52,6 +54,8 @@ const handleSubmit = async (e) => {
 
   const toggleNightMode = () => {
     setIsNightMode(!isNightMode);
+    const modeType = isNightMode ? 'day' : 'night'; 
+    localStorage.setItem('mode' , modeType )
     document.body.classList.toggle("night-mode");
   };
 
@@ -74,6 +78,7 @@ const handleSubmit = async (e) => {
         </div>
 
         <div className={isNightMode ? "text-night" : "text-day"}>
+        <img className={`insta-logo ${isNightMode ? 'logo-night' : '' } `} src={instaLogo} alt="" />
           <LoginInput
             handleEmail={handleEmail}
             handlePassword={handlePassword}

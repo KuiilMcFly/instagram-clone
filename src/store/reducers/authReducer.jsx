@@ -3,7 +3,7 @@ import * as actionTypes from '../actions/handleAuth';
 const initialState = {
  loading: false,
  error: false,
- token: null,
+ token: localStorage.getItem('token'),
  userID: null,
 
 }
