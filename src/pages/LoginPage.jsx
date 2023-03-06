@@ -14,7 +14,7 @@ import { auth } from "../store/actions/handleAuth";
 
 const LoginPage = () => {
   const Navigate = useNavigate();
-  let token = localStorage.getItem("token");
+  const token = useSelector(state => state.authReducer.token);
 
   const [isNightMode, setIsNightMode] = useState(false);
   const [email, setEmail] = useState("");

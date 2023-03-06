@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import instagramLogo from "../../assets/instagramlogo.png";
+import instragramLogo from '../../assets/Instagram_logo.svg'
 import facebookLogo from "../../assets/facebook.png";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -23,7 +23,7 @@ const [password , setPassword ] = useState("");
 
   return (
     <form onSubmit={handleSubmit}>
-      <img src={instagramLogo} alt="" />
+      <img className="insta-logo" src={instragramLogo} alt="" />
       <h2>Iscriviti per vedere le foto e i video dei tuoi amici</h2>
       <button>
         <img src={facebookLogo} alt="" />

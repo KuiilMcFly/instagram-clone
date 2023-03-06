@@ -1,11 +1,15 @@
-import instagramLogo from "../assets/instagramlogo.png"
+import '../Styles/home.css'
+import Stories from '../components/stories';
+import HomeLeftBar from '../components/HomeLeftBar';
 const Home = () => {
     return(
         <div>
-            <div className="left-bar">
-                <img src={instagramLogo} alt="" />
-            </div>
+            <HomeLeftBar/>
+            <Stories/>
         </div>
+
+            
+        
     )
 }
 

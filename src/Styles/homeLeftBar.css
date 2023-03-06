@@ -1,0 +1,17 @@
+.left-bar {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.left-bar .insta-logo {
+  width: 150px;
+}
+.left-bar a {
+  text-decoration: none;
+  color: black;
+  font-size: 21px;
+}
+.left-bar h3 {
+  margin-top: 400px;
+}/*# sourceMappingURL=homeLeftBar.css.map */
