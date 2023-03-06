@@ -56,7 +56,7 @@ const handleSubmit = async (e) => {
     setIsNightMode(!isNightMode);
     const modeType = isNightMode ? 'day' : 'night'; 
     localStorage.setItem('mode' , modeType )
-    document.body.classList.toggle("night-mode");
+   document.body.classList.toggle("night-mode");
   };
 
   return (
