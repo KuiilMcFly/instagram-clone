@@ -1,0 +1,21 @@
+.post-background {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.img-post-container {
+    padding-top:20px;
+    img {
+        max-width: 550px;
+        border: solid 1px gray;
+    }
+}
+
+input {
+    border-bottom: solid white 1px;
+    background-color: #0F0F0F;
+    width: 550px;
+    height: 30px;
+}

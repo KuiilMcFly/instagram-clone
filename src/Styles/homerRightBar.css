@@ -6,13 +6,21 @@
 
 .profile-space {
   display: flex;
+  padding-top: 30px;
+  gap: 15px;
 }
 .profile-space img {
   border-radius: 100%;
-  width: 55px;
+  width: 53px;
 }
 
 .name-nickname {
   display: flex;
   flex-direction: column;
+}
+
+.suggest-line {
+  display: flex;
+  gap: 30px;
+  padding-top: 10px;
 }/*# sourceMappingURL=homerRightBar.css.map */
