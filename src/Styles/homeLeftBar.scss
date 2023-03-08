@@ -1,11 +1,16 @@
 .left-bar{
-    padding: 30px;
+width: 15%;
+    
+
+.left-bar-content {
+    position: fixed;
+    padding: 30px 70px 30px 30px;
+    border-right: solid 1px black;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    border: solid 1px black;
-    padding-right: 150px;
-    
+}
+
     .insta-logo{
         width: 150px;
     }

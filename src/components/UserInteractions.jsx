@@ -9,11 +9,11 @@ const UserInteractions = () => {
   return (
     <div className='interactions-box'>
         <div>
-            <AiOutlineHeart/>
-            <FaRegComment/>
-            <TbBrandTelegram/>
+            <AiOutlineHeart size={25}/>
+            <FaRegComment size={25}/>
+            <TbBrandTelegram size={25}/>
         </div>
-            <BsBookmark/>
+            <BsBookmark size={25}/>
     </div>
   )
 }
