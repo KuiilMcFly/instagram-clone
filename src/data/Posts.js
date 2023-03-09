@@ -7,7 +7,6 @@ const fakePosts = [
     date: "3h",
     image: "https://picsum.photos/id/12/800/600",
     liked: {
-      number_likes: 300,
       users: [
         {
           id: "1",
@@ -51,7 +50,6 @@ const fakePosts = [
     date: "12h",
     image: "https://picsum.photos/id/107/800/600",
     liked: {
-      number_likes: 10,
       users: [
         {
           id: "1",
@@ -61,6 +59,11 @@ const fakePosts = [
         {
           id: "2",
           username: "Luigi",
+          user_image: "",
+        },
+        {
+          id: "3",
+          username: "Pippo",
           user_image: "",
         },
       ],
@@ -90,3 +93,9 @@ const fakePosts = [
 ];
 
 export default fakePosts;
+
+
+
+
+
+

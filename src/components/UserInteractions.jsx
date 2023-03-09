@@ -5,12 +5,13 @@ import {BsBookmark} from 'react-icons/bs';
 import '../Styles/userinteractions.css';
 
 
-const UserInteractions = () => {
+const UserInteractions = ({setIsOpen}) => {
+
   return (
     <div className='interactions-box'>
         <div>
             <AiOutlineHeart size={25}/>
-            <FaRegComment size={25}/>
+            <FaRegComment size={25} onClick={() => setIsOpen(true)}/>
             <TbBrandTelegram size={25}/>
         </div>
             <BsBookmark size={25}/>
