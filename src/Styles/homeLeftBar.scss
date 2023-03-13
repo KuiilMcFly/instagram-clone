@@ -14,13 +14,16 @@ width: 15%;
     .insta-logo{
         width: 150px;
     }
-    a {
+    button {
         text-decoration: none;
-        color: black;
+        color: white;
+        border: solid 1px #0F0F0F;
+        background-color: #0F0F0F;
         font-size: 21px;
         display: flex;
         gap: 8px;
         align-items: center;
+        cursor: pointer;
     }
     h3 {
         margin-top: 400px;

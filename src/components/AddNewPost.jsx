@@ -1,21 +1,19 @@
 import React from "react";
 import "../Styles/addNewPost.css";
 
-export const AddNewPost = ({setIsOpen}) => {
-    
-
-    const closeModal = () => {
-        setIsOpen(false);
-      }
+export const AddNewPost = ({ setIsOpen }) => {
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   return (
-    <div className="create-post" onClick={closeModal}>
+    <div className="create-post">
       <div className="flex-newpost">
         <p className="border">Crea un nuovo post</p>
         <div className="upload-photo">
           <svg
             aria-label="Icona per rappresentare i contenuti multimediali come immagini o video"
-            class="_ab6-"
+            className="_ab6-"
             color="rgb(245, 245, 245)"
             fill="rgb(245, 245, 245)"
             height="77"
@@ -37,10 +35,13 @@ export const AddNewPost = ({setIsOpen}) => {
             ></path>
           </svg>
           <p>Trascina le foto e i video qui</p>
-          <button>Seleziona dal computer</button>
+          <div>
+            <button>Seleziona dal computer</button>
+            <input type="file" name="" id="" />
+          </div>
         </div>
-        
       </div>
+      <div className="overlay" onClick={() => setIsOpen(false)}></div>
     </div>
   );
 };

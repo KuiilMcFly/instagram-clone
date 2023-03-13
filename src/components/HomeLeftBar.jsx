@@ -11,46 +11,43 @@ import { BsCameraReels } from "react-icons/bs";
 import { AddNewPost } from "./AddNewPost";
 import { useState } from "react";
 const HomeLeftBar = () => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="left-bar">
       <div className="left-bar-content">
         <img className="insta-logo" src={instagramLogo} alt="" />
-        <Link>
+        <button>
           <AiFillHome /> Home
-        </Link>
-        <Link>
+        </button>
+        <button>
           <BsSearch />
           Cerca
-        </Link>
-        <Link>
+        </button>
+        <button>
           <TiCompass />
           Esplora
-        </Link>
-        <Link>
+        </button>
+        <button>
           <BsCameraReels />
           Reels
-        </Link>
-        <Link>
+        </button>
+        <button>
           <FaTelegramPlane />
           Messaggi
-        </Link>
-        <Link>
+        </button>
+        <button>
           <AiOutlineHeart />
           Notifiche
-        </Link>
-        <Link onClick={() => setIsOpen(true)}>
+        </button>
+        <button onClick={() => setIsOpen(true)}>
           <CiSquarePlus />
           Crea
-          {isOpen && <AddNewPost
-        setIsOpen={setIsOpen} 
-        />}
-        </Link>
-        <Link>Profilo</Link>
+        </button>
+        <button>Profilo</button>
 
         <h3>Altro</h3>
+          {isOpen && <AddNewPost setIsOpen={setIsOpen} />}
       </div>
     </div>
   );
