@@ -1,8 +1,15 @@
 import React from "react";
 import "../Styles/addNewPost.css";
-export const AddNewPost = () => {
+
+export const AddNewPost = ({setIsOpen}) => {
+    
+
+    const closeModal = () => {
+        setIsOpen(false);
+      }
+
   return (
-    <div className="create-post">
+    <div className="create-post" onClick={closeModal}>
       <div className="flex-newpost">
         <p className="border">Crea un nuovo post</p>
         <div className="upload-photo">
@@ -32,6 +39,7 @@ export const AddNewPost = () => {
           <p>Trascina le foto e i video qui</p>
           <button>Seleziona dal computer</button>
         </div>
+        
       </div>
     </div>
   );
