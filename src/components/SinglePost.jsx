@@ -28,7 +28,14 @@ const SinglePost = ({ post }) => {
 
         </p>
         <p onClick={() => setIsOpen(true)}>Mostra tutti e i {comments.length} commenti</p>
-        {isOpen && <ModalComments setIsOpen={setIsOpen} user_image={user_image} postImage={image}/>}
+        {isOpen && <ModalComments 
+        setIsOpen={setIsOpen} 
+        user_image={user_image} 
+        postImage={image}
+        comments={comments}
+        username={username}
+        date={date}
+        />}
         <input type="text" placeholder="Aggiungi un commento..." />
       </div>
     </div>

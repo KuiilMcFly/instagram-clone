@@ -1,0 +1,38 @@
+.create-post {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-newpost {
+    background-color: #262626;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px;
+    width: 550px;
+    height: 598px;
+    .border {
+        border-bottom: 1px white solid;
+    }
+  }
+
+  .upload-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    button {
+        background-color:#1877F2 ;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border: solid #1877F2;
+        font-weight: bold;
+    }
+  }

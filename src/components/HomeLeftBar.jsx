@@ -8,7 +8,12 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { CiSquarePlus } from "react-icons/ci";
 import { BsCameraReels } from "react-icons/bs";
+import { AddNewPost } from "./AddNewPost";
+import { useState } from "react";
 const HomeLeftBar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="left-bar">
       <div className="left-bar-content">
@@ -36,9 +41,12 @@ const HomeLeftBar = () => {
           <AiOutlineHeart />
           Notifiche
         </Link>
-        <Link>
+        <Link onClick={() => setIsOpen(true)}>
           <CiSquarePlus />
           Crea
+          {isOpen && <AddNewPost
+        setIsOpen={setIsOpen} 
+        />}
         </Link>
         <Link>Profilo</Link>
 

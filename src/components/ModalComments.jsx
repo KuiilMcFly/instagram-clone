@@ -2,7 +2,7 @@ import UserBox from "./UserBox";
 import UserInteractions from "./UserInteractions";
 import '../Styles/modalComments.css'
 
-const ModalComments = ({ setIsOpen, user_image, postImage }) => {
+const ModalComments = ({ setIsOpen, user_image, postImage, comments, username, date }) => {
   return (
     <div className="modalComments">
       <div className="flex-content">
@@ -10,13 +10,13 @@ const ModalComments = ({ setIsOpen, user_image, postImage }) => {
               <img src={postImage} alt="" />
           </div>
           <div className="comments-box">
-              <UserBox user_image={user_image} />
+              <UserBox username={username} date={date} user_image={user_image} />
               <div className="description">
-
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </div>
 
               <div className="comments">
-
+                  
               </div>
               <UserInteractions/>
           </div>
