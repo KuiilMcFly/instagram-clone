@@ -1,10 +1,23 @@
 import React from "react";
 import "../Styles/addNewPost.css";
+import { useState } from "react";
+import { storage } from "../firebase";
+import {ref, uploadBytes} from "firebase/storage";
+import {v4} from 'uuid';
 
 export const AddNewPost = ({ setIsOpen }) => {
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+
+let [imageUpload, setImageUpload] = useState(null);
+
+
+  const uploadImage = async () => {
+    if(imageUpload == null) return;
+    const imageRef = ref(storage, `images/${imageUpload.name ?? "" + v4()}`);
+    uploadBytes(imageRef, imageUpload).then(() => {
+      alert('Image Uploaded');
+    })
+    
+  }
 
   return (
     <div className="create-post">
@@ -36,8 +49,8 @@ export const AddNewPost = ({ setIsOpen }) => {
           </svg>
           <p>Trascina le foto e i video qui</p>
           <div>
-            <button>Seleziona dal computer</button>
-            <input type="file" name="" id="" />
+            <input type="file" onChange={(event) => {setImageUpload(event.target.files[0])}}/>
+            <button onClick={uploadImage}>Seleziona dal computer</button>
           </div>
         </div>
       </div>
@@ -45,3 +58,4 @@ export const AddNewPost = ({ setIsOpen }) => {
     </div>
   );
 };
+
