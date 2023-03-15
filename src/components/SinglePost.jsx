@@ -25,7 +25,7 @@ const SinglePost = ({ post }) => {
 
       <div className="under-post">
         <p>
-
+          Piace a {liked[0]?.username} e {liked?.length-1}
         </p>
         <p onClick={() => setIsOpen(true)}>Mostra tutti e i {comments.length} commenti</p>
         {isOpen && <ModalComments 
