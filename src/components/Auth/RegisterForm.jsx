@@ -14,7 +14,7 @@ const [userName , setUserName ] = useState("");
 const [password , setPassword ] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(auth(email, password, true));
+    dispatch(auth(email, password, true, userName));
     console.log("email e password", email, password);
     setEmail("");
     setPassword("");

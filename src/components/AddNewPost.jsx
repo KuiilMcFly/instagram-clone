@@ -1,14 +1,17 @@
 import React from "react";
 import "../Styles/addNewPost.css";
 import { useState } from "react";
-import { storage } from "../firebase";
+import { storage , auth} from "../firebase";
 import {ref, uploadBytes} from "firebase/storage";
 import {v4} from 'uuid';
+
 
 export const AddNewPost = ({ setIsOpen }) => {
 
 let [imageUpload, setImageUpload] = useState(null);
 
+
+console.log(auth.currentUser.email);
 
   const uploadImage = async () => {
     if(imageUpload == null) return;
