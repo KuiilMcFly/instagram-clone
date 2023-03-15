@@ -26,7 +26,7 @@ export const auth = (email, password, isSignup) => {
                 localStorage.setItem('token', response.data.idToken);
                 localStorage.setItem('userId', response.data.localId);
                 dispatch(AuthSuccess(response.data));
-
+                    //qua 
         } catch (error) {
             dispatch(AuthFail(error));
            alert(error.response.data.error.message);
@@ -35,6 +35,15 @@ export const auth = (email, password, isSignup) => {
     }
 }
 
+/*
+Dovrai aggiungere quando lútente si registra salvare a db un nuovo campo con i dati dell'utente tranne password e salvarci
+ anche il nome utente la struttura del db dovrà essere uguale al json che abbiamo quindi
+  {
+    "id": 1,
+    "username": "lbinch0",
+    "user_image": "http://dummyimage.com/x.png/ff4444/ffffff",
+
+*/
 
 
 export const AuthStart = () => {
