@@ -11,7 +11,7 @@ export const AddNewPost = ({ setIsOpen }) => {
 let [imageUpload, setImageUpload] = useState(null);
 
 
-console.log(auth.currentUser.email);
+  
 
   const uploadImage = async () => {
     if(imageUpload == null) return;

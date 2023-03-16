@@ -1,0 +1,16 @@
+.profile-section {
+    display: flex;
+}
+.profile-info{
+    display: flex;
+    .info-bio {
+        
+        .nickname-setting {
+            display: flex;
+        }
+
+        .follow-info{
+            display: flex;
+        }
+    }
+}

@@ -2,6 +2,7 @@ import '../Styles/homerRightBar.css';
 import propicPlaceHolder from '../assets/propic_placeholder.jpg';
 import { Link } from 'react-router-dom';
 import SuggestBox from './suggestBox';
+import { Profile } from '../pages/Profile';
 
 const HomeRightBar = () => {
   return (
@@ -9,7 +10,7 @@ const HomeRightBar = () => {
         <div className='profile-space'>
             <img src={propicPlaceHolder} alt="" />
             <div className='name-nickname'>
-                <h3>nickname</h3>
+                <Link to={<Profile/>}><h3>nickname</h3></Link>
                 <p>name</p>
             </div>
 

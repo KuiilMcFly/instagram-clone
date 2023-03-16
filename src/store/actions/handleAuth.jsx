@@ -24,18 +24,6 @@ export const auth = (email, password, isSignup, username) => {
       localStorage.setItem("token", response.data.idToken);
       localStorage.setItem("userId", response.data.localId);
       dispatch(AuthSuccess(response.data));
-      const number = Math.floor(Math.random() * 60) + 1;
-      const data = {
-        id: crypto.randomUUID(),
-        username: username,
-        user_image: `https://picsum.photos/id/${number}/200/300`,
-        email: email,
-      };
-      const resp = axios.post(
-        "https://instagram-clone-7ee14-default-rtdb.europe-west1.firebasedatabase.app/",
-        data
-      );
-      console.log(resp.data);
     } catch (error) {
       alert(error.response.data.error.message);
       console.log(error.response.data.error.message);
