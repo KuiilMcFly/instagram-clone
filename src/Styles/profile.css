@@ -3,11 +3,26 @@
 }
 
 .profile-info {
+  align-items: center;
+  gap: 50px;
   display: flex;
+}
+.profile-info .proPicImg {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  border: solid 2px gray;
+}
+.profile-info .info-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .profile-info .info-bio .nickname-setting {
   display: flex;
+  gap: 50px;
 }
 .profile-info .info-bio .follow-info {
   display: flex;
+  gap: 60px;
 }/*# sourceMappingURL=profile.css.map */

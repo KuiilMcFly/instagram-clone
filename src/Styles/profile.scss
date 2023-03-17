@@ -2,15 +2,28 @@
     display: flex;
 }
 .profile-info{
+    
+    .proPicImg {
+        border-radius: 100%;
+        width: 200px;
+        height: 200px;
+        border: solid 2px gray;
+    }
+    align-items: center;
+    gap: 50px;
     display: flex;
     .info-bio {
-        
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
         .nickname-setting {
             display: flex;
+            gap: 50px;
         }
 
         .follow-info{
             display: flex;
+            gap: 60px;
         }
     }
 }

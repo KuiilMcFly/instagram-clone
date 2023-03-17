@@ -7,7 +7,7 @@ export const Profile = () => {
     <div className='profile-section'>
         <HomeLeftBar/>
             <div className='profile-info'>
-                <img src="" alt="" />
+                <img className='proPicImg' src="https://picsum.photos/id/237/200/300" alt="" />
                 <div className='info-bio'>
                     <div className='nickname-setting'>
                         <p>username</p>
@@ -23,6 +23,7 @@ export const Profile = () => {
                     </div>
                 </div>
             </div>
+            
     </div>
   )
 }

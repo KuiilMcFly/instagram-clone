@@ -10,7 +10,7 @@ const HomeRightBar = () => {
         <div className='profile-space'>
             <img src={propicPlaceHolder} alt="" />
             <div className='name-nickname'>
-                <Link to={<Profile/>}><h3>nickname</h3></Link>
+                <Link to={"/pages/Profile"}><h3>nickname</h3></Link>
                 <p>name</p>
             </div>
 
