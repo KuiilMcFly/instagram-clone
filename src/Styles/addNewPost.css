@@ -25,11 +25,14 @@
 }
 
 .upload-photo {
-  padding-top: 150px;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+}
+.upload-photo img {
+  width: 100%;
 }
 .upload-photo button {
   background-color: #1877F2;

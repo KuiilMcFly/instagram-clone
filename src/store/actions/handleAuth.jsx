@@ -23,6 +23,7 @@ export const auth = (email, password, isSignup, username) => {
       console.log(response.data);
       localStorage.setItem("token", response.data.idToken);
       localStorage.setItem("userId", response.data.localId);
+      localStorage.setItem("email", email);
       dispatch(AuthSuccess(response.data));
     } catch (error) {
       alert(error.response.data.error.message);

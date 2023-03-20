@@ -4,10 +4,17 @@ import { useState } from "react";
 import { storage, auth } from "../firebase";
 import { ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
+import { authCheck } from "../store/actions/handleAuth";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 export const AddNewPost = ({ setIsOpen }) => {
   const [preview, setpreview] = useState(null);
   const [imageUpload, setImageUpload] = useState(null);
+  const [description, setDescription ] = useState("");
+  
+
+
 
   function setImage(e) {
     setImageUpload(e.target.files[0]);
@@ -18,12 +25,23 @@ export const AddNewPost = ({ setIsOpen }) => {
       setpreview(reader.result);
     };
   }
+  
+    
   const uploadImage = async () => {
     if (imageUpload == null) return;
     const imageRef = ref(storage, `images/${imageUpload.name ?? "" + v4()}`);
     uploadBytes(imageRef, imageUpload).then(() => {
       alert("Image Uploaded");
     });
+    const imgPath = `https://firebasestorage.googleapis.com/v0/b/instagram-clone-7ee14.appspot.com/o/${encodeURIComponent(imageRef.fullPath)}?alt=media`
+    const email = localStorage.getItem('email');
+    const data = {
+      image : imgPath,
+      email,
+      description,
+    }
+    const resp = await axios.post('https://instagram-clone-7ee14-default-rtdb.europe-west1.firebasedatabase.app/posts.json',data);
+    console.log(resp)
   };
 
   return (
@@ -61,8 +79,8 @@ export const AddNewPost = ({ setIsOpen }) => {
         {preview && <img src={preview} alt="Preview" />}
           <div>
             <input type="file" onChange={(e) => setImage(e)}  />
+            <input type="text" name="" id="" placeholder="Testo di descrizione" onChange={(e) => setDescription(e.target.value)} />
             <button onClick={uploadImage}>Upload</button>
-
           </div>
         </div>
       </div>
