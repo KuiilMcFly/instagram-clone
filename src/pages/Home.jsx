@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Home = () => {
+    
 
 const [dummyPosts, setDummyPosts] = useState([]);
 
@@ -18,7 +19,6 @@ const [dummyPosts, setDummyPosts] = useState([]);
     }
     fetchPosts();
   }, []);
-
 
     return(
         <div className='home-structure'>
