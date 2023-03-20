@@ -1,0 +1,11 @@
+.profile-contents {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.profile-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}/*# sourceMappingURL=ProfilePost.css.map */

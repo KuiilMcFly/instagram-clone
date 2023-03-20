@@ -1,8 +1,14 @@
 .profile-section {
   display: flex;
 }
+.profile-section .col-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .profile-info {
+  padding: 10px;
   align-items: center;
   gap: 50px;
   display: flex;

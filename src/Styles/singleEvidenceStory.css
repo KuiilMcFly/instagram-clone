@@ -1,0 +1,10 @@
+.single-evidence-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}
+.single-evidence-story img {
+  width: 50px;
+  border-radius: 100%;
+}/*# sourceMappingURL=singleEvidenceStory.css.map */
