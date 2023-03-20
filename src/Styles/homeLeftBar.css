@@ -23,6 +23,10 @@
   align-items: center;
   cursor: pointer;
 }
+.left-bar button a {
+  text-decoration: none;
+  color: white;
+}
 .left-bar h3 {
   margin-top: 400px;
 }/*# sourceMappingURL=homeLeftBar.css.map */

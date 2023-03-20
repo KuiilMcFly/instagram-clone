@@ -2,7 +2,7 @@ import '../Styles/homerRightBar.css';
 import propicPlaceHolder from '../assets/propic_placeholder.jpg';
 import { Link } from 'react-router-dom';
 import SuggestBox from './suggestBox';
-import { Profile } from '../pages/Profile';
+
 
 const HomeRightBar = () => {
   return (

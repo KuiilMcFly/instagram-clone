@@ -4,7 +4,7 @@ import '../Styles/profile.css';
 import EvidenceStories from '../components/EvidenceStories';
 import ProfilePosts from '../components/ProfilePosts';
 
-const Profile = () => {
+export const Profile = () => {
   return (
     <div className='profile-section'>
         <HomeLeftBar/>
@@ -34,4 +34,4 @@ const Profile = () => {
   )
 }
 
-export default Profile;
+

@@ -18,7 +18,9 @@ const HomeLeftBar = () => {
       <div className="left-bar-content">
         <img className="insta-logo" src={instagramLogo} alt="" />
         <button>
-          <AiFillHome /> Home
+          <Link to={'/home'}>
+            <AiFillHome /> Home
+          </Link>
         </button>
         <button>
           <BsSearch />
@@ -44,7 +46,11 @@ const HomeLeftBar = () => {
           <CiSquarePlus />
           Crea
         </button>
-        <button>Profilo</button>
+        <button>
+          <Link to={"/pages/Profile"}>
+            Profilo
+          </Link>
+        </button>
 
         <h3>Altro</h3>
           {isOpen && <AddNewPost setIsOpen={setIsOpen} />}

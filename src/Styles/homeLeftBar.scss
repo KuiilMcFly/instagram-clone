@@ -1,6 +1,5 @@
 .left-bar{
 width: 15%;
-    
 
 .left-bar-content {
     position: fixed;
@@ -24,6 +23,10 @@ width: 15%;
         gap: 8px;
         align-items: center;
         cursor: pointer;
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
     h3 {
         margin-top: 400px;

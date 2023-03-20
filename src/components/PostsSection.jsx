@@ -5,6 +5,7 @@ import SinglePost from "./SinglePost";
 // import fakePosts from "../data/Posts";
 
 const PostsSection = () => {
+
   const [dummyPosts, setDummyPosts] = useState([]);
 
   useEffect(() => {
