@@ -4,15 +4,20 @@ import "../Styles/PostsSection.css";
 import SinglePost from "./SinglePost";
 // import fakePosts from "../data/Posts";
 
-const PostsSection = () => {
+const PostsSection = (post) => {
 
   const [dummyPosts, setDummyPosts] = useState([]);
 
   useEffect(() => {
     async function fetchPosts() {
-      const resp = await axios.get("/src/data/MOCK_DATA.json");
+      // const resp = await axios.get("/src/data/MOCK_DATA.json");
+      const resp = await axios.get('https://instagram-clone-7ee14-default-rtdb.europe-west1.firebasedatabase.app/posts.json');
       const data = resp.data;
-      setDummyPosts(data);
+      // const fbdata = resp.data;
+      // const newData = [fbdata,data]
+      //setRealData(fbdata)
+      const dataArray = Object.entries(data).map(([key, value]) => ({id: key, ...value}));
+      setDummyPosts(dataArray);
     }
     fetchPosts();
   }, []);

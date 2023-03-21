@@ -7,7 +7,7 @@ import { v4 } from "uuid";
 import { authCheck } from "../store/actions/handleAuth";
 import { useSelector } from "react-redux";
 import axios from "axios";
-
+import { getRandomCity } from "../data/italianCIty";
 export const AddNewPost = ({ setIsOpen }) => {
   const [preview, setpreview] = useState(null);
   const [imageUpload, setImageUpload] = useState(null);
@@ -35,13 +35,26 @@ export const AddNewPost = ({ setIsOpen }) => {
     });
     const imgPath = `https://firebasestorage.googleapis.com/v0/b/instagram-clone-7ee14.appspot.com/o/${encodeURIComponent(imageRef.fullPath)}?alt=media`
     const email = localStorage.getItem('email');
+    const id = crypto.randomUUID();
+    const username = email.substring(0, email.indexOf('@'));
+    const randomNumber = Math.floor(Math.random() * 100);
+    const user_image = `https://picsum.photos/id/${randomNumber}/800/600`
+    const location = getRandomCity();
     const data = {
+      id,
+      username,
+      user_image,
+      location,
+      liked:[],
+      comments:[],
       image : imgPath,
       email,
       description,
     }
+    console.log(data);
     const resp = await axios.post('https://instagram-clone-7ee14-default-rtdb.europe-west1.firebasedatabase.app/posts.json',data);
     console.log(resp)
+    window.location.reload();
   };
 
   return (

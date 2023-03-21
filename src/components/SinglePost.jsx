@@ -21,21 +21,27 @@ const SinglePost = ({ post }) => {
       <div className="img-post-container">
         <img src={image} alt="" />
       </div>
-      <UserInteractions setIsOpen={setIsOpen}/>
+      <UserInteractions setIsOpen={setIsOpen} />
 
       <div className="under-post">
         <p>
-          Piace a {liked[0]?.username} e {liked?.length-1}
+          Piace a {liked && liked[0] && liked[0].username} e{" "}
+          {liked && liked.length > 1 && liked.length - 1}
         </p>
-        <p onClick={() => setIsOpen(true)}>Mostra tutti e i {comments.length} commenti</p>
-        {isOpen && <ModalComments 
-        setIsOpen={setIsOpen} 
-        user_image={user_image} 
-        postImage={image}
-        comments={comments}
-        username={username}
-        date={date}
-        />}
+        <p onClick={() => setIsOpen(true)}>
+          Mostra tutti e i {comments && comments.length} commenti
+        </p>
+
+        {isOpen && (
+          <ModalComments
+            setIsOpen={setIsOpen}
+            user_image={user_image}
+            postImage={image}
+            comments={comments}
+            username={username}
+            date={date}
+          />
+        )}
         <input type="text" placeholder="Aggiungi un commento..." />
       </div>
     </div>
