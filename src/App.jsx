@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/" element={<LoginPage/>}/>
         <Route exact path="/register" element={<Register/>}/>
         <Route exact path="/home" element={<Home/>}/>
-        <Route exact path="/pages/Profile" element={<Profile/>}/>
+        <Route exact path="/pages/profile/:username" element={<Profile/>}/>
     </Routes>
   </div>
   )

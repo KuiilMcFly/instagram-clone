@@ -6,7 +6,7 @@ import "../Styles/singlepost.css";
 import ModalComments from "./ModalComments";
 
 const SinglePost = ({ post }) => {
-  const { username, location, id, user_image, date, image, liked, comments } =
+  const { username, location, id, user_image, created_at, image, liked, comments } =
     post;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +14,7 @@ const SinglePost = ({ post }) => {
     <div className="post">
       <UserBox
         username={username}
-        date={date}
+        date={created_at}
         user_image={user_image}
         location={location}
       />

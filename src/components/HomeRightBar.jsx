@@ -5,12 +5,15 @@ import SuggestBox from './suggestBox';
 
 
 const HomeRightBar = () => {
+const email = localStorage.getItem('email');
+const username = email.substring(0, email.indexOf('@'));
+
   return (
     <div className="right-bar">
         <div className='profile-space'>
             <img src={propicPlaceHolder} alt="" />
             <div className='name-nickname'>
-                <Link to={"/pages/Profile"}><h3>nickname</h3></Link>
+                <Link to={`/pages/profile/${username}`} state={{username}}><h3>{username}</h3></Link>
                 <p>name</p>
             </div>
 
