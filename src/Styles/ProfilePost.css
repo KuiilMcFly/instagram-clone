@@ -8,4 +8,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
+}
+.profile-photos img {
+  width: 309px;
+  height: 309px;
 }/*# sourceMappingURL=ProfilePost.css.map */

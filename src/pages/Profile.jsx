@@ -43,7 +43,7 @@ export const Profile = () => {
                 </div>
             </div>
         <EvidenceStories/>
-        <ProfilePosts/>
+        <ProfilePosts profileData={profileData}/>
         </div>
             
     </div>

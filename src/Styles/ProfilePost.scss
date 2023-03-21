@@ -8,4 +8,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
+
+    img {
+        width: 309px;
+        height: 309px;
+    }
 }
