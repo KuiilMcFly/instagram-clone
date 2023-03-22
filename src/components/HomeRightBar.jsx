@@ -2,11 +2,22 @@ import '../Styles/homerRightBar.css';
 import propicPlaceHolder from '../assets/propic_placeholder.jpg';
 import { Link } from 'react-router-dom';
 import SuggestBox from './suggestBox';
+import { Navigate } from 'react-router-dom';
 
 
 const HomeRightBar = () => {
 const email = localStorage.getItem('email');
-const username = email.substring(0, email.indexOf('@'));
+const username = email ? email.substring(0, email.indexOf('@')) : '';
+
+const LogOut = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("userId");
+  localStorage.removeItem("email");
+  if (!state) {
+    Navigate({ to: "/" });
+    return null;
+  }
+}
 
   return (
     <div className="right-bar">
@@ -17,7 +28,10 @@ const username = email.substring(0, email.indexOf('@'));
                 <p>name</p>
             </div>
 
-            <p>Cambia Account</p>
+          <Link to={"/"} onClick={LogOut}>
+            <p>Logout</p>
+          </Link>
+
         </div>
 
         <div className='suggest-line'>

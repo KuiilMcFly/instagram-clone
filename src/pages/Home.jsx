@@ -20,6 +20,9 @@ const [dummyPosts, setDummyPosts] = useState([]);
     fetchPosts();
   }, []);
 
+
+
+
     return(
         <div className='home-structure'>
             

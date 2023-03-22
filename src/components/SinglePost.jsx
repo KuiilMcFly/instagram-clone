@@ -6,7 +6,7 @@ import "../Styles/singlepost.css";
 import ModalComments from "./ModalComments";
 
 const SinglePost = ({ post }) => {
-  const { username, location, id, user_image, created_at, image, liked, comments } =
+  const { username, location, id, user_image, created_at, image, liked, comments, date } =
     post;
   const [isOpen, setIsOpen] = useState(false);
 
