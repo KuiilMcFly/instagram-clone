@@ -11,6 +11,7 @@
     img {
         border-radius: 100%;
         width: 53px;
+        height: 53px;
     }
 }
 
@@ -23,6 +24,18 @@
     display:flex;
     gap: 30px;
     padding-top: 10px;
+}
+
+.suggest-box {
+    img {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .right-bar {
+        display: none;
+    }
 }
 
 

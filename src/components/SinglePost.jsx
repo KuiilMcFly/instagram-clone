@@ -21,7 +21,7 @@ const SinglePost = ({ post }) => {
       <div className="img-post-container">
         <img src={image} alt="" />
       </div>
-      <UserInteractions setIsOpen={setIsOpen} />
+      <UserInteractions setIsOpen={setIsOpen} id={id} />
 
       <div className="under-post">
         <p>

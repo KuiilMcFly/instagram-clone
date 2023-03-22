@@ -6,11 +6,12 @@ import { useState } from 'react';
 import '../Styles/userinteractions.css';
 
 
-const UserInteractions = ({setIsOpen}) => {
-
+const UserInteractions = ({setIsOpen, id}) => {
   const [heartColor, setHeartColor] = useState('white');
 
   const handleClickHeart = () => {
+    console.log(id);
+    
     setHeartColor('red');
     if(heartColor === 'red') {
       setHeartColor('white');

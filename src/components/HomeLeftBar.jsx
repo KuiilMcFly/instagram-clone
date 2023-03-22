@@ -10,6 +10,7 @@ import { CiSquarePlus } from "react-icons/ci";
 import { BsCameraReels } from "react-icons/bs";
 import { AddNewPost } from "./AddNewPost";
 import { useState } from "react";
+import instagramIcon from "../assets/instagram-seeklogo.com.svg"
 const HomeLeftBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,38 +18,39 @@ const HomeLeftBar = () => {
     <div className="left-bar">
       <div className="left-bar-content">
         <img className="insta-logo" src={instagramLogo} alt="" />
+        <img className="insta-icon" src={instagramIcon} alt="" />
         <button>
           <Link to={'/home'}>
-            <AiFillHome /> Home
+            <AiFillHome size ={'35px'}/> <span>Home</span>
           </Link>
         </button>
         <button>
-          <BsSearch />
-          Cerca
+          <BsSearch size ={'35px'} />
+         <span>Cerca</span> 
         </button>
         <button>
-          <TiCompass />
-          Esplora
+          <TiCompass size ={'35px'} />
+         <span>Esplora</span> 
         </button>
         <button>
-          <BsCameraReels />
-          Reels
+          <BsCameraReels size ={'35px'} />
+         <span>Reels</span>
         </button>
         <button>
-          <FaTelegramPlane />
-          Messaggi
+          <FaTelegramPlane size ={'35px'} />
+         <span>Messaggi</span> 
         </button>
         <button>
-          <AiOutlineHeart />
-          Notifiche
+          <AiOutlineHeart size ={'35px'} />
+         <span>Notifiche</span>
         </button>
         <button onClick={() => setIsOpen(true)}>
-          <CiSquarePlus />
-          Crea
+          <CiSquarePlus size ={'35px'}/>
+         <span>Crea</span>
         </button>
         <button>
           <Link to={"/pages/Profile"}>
-            Profilo
+           <span>Profilo</span>
           </Link>
         </button>
 

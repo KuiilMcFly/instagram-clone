@@ -1,4 +1,5 @@
 .left-bar {
+  z-index: 1;
   width: 15%;
 }
 .left-bar .left-bar-content {
@@ -11,6 +12,11 @@
 }
 .left-bar .insta-logo {
   width: 150px;
+}
+.left-bar .insta-icon {
+  width: 50px;
+  position: absolute;
+  opacity: 0;
 }
 .left-bar button {
   text-decoration: none;
@@ -29,4 +35,16 @@
 }
 .left-bar h3 {
   margin-top: 400px;
+}
+
+@media screen and (max-width: 1260px) {
+  button span {
+    display: none;
+  }
+  .insta-logo {
+    opacity: 0;
+  }
+  .insta-icon {
+    opacity: 1 !important;
+  }
 }/*# sourceMappingURL=homeLeftBar.css.map */
