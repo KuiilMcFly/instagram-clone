@@ -11,6 +11,7 @@ const Home = () => {
 
 const [posts, setPosts] = useState([]);
 
+
 useEffect(() => {
   async function fetchPosts() {
     const resp = await axios.get('https://instagram-clone-7ee14-default-rtdb.europe-west1.firebasedatabase.app/posts.json');

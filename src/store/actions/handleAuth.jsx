@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 const AUTH_START = "AUTH_START";
 const AUTH_SUCCESS = "AUTH_SUCCESS";
 const AUTH_FAIL = "AUTH_FAIL";
@@ -25,6 +26,9 @@ export const auth = (email, password, isSignup, username) => {
       localStorage.setItem("userId", response.data.localId);
       localStorage.setItem("email", email);
       dispatch(AuthSuccess(response.data));
+      
+      
+      
     } catch (error) {
       alert(error.response.data.error.message);
       console.log(error.response.data.error.message);

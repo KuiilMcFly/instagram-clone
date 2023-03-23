@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import instragramLogo from '../../assets/Instagram_logo.svg'
 import facebookLogo from "../../assets/facebook.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { auth } from "../../store/actions/handleAuth";
+import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
 const dispatch = useDispatch();
@@ -10,6 +11,9 @@ const [email , setEmail ] = useState("");
 const [name , setName ] = useState("");
 const [userName , setUserName ] = useState("");
 const [password , setPassword ] = useState("");
+const error = useSelector(state => state.authReducer.error);
+const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(auth(email, password, true, userName, name));
@@ -19,6 +23,7 @@ const [password , setPassword ] = useState("");
     setUserName("");
     setPassword("");
     console.log('ciao');
+    navigate("/");
   };
 
   return (
