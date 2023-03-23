@@ -17,7 +17,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
-    z-index: 999;
+    z-index: 9;
     height: 598px;
     .border {
         border-bottom: 1px white solid;
@@ -50,5 +50,5 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.6);
-  z-index: 10;
+  z-index: -1;
 }
