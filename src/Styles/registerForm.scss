@@ -3,21 +3,49 @@
     justify-content: center;
     text-align: center;
     div {
+        form {
+            margin-top: 100px;
+            h2 {
+                padding-bottom: 10px;
+            }
+            border: solid 1px white;
+            padding: 20px;
+
+            .complete-register {
+                padding: 10px;
+                color: white;
+                background-color: #1877F2;
+                border-radius: 15px;
+                margin-top: 10px;
+                width: 150px;
+            }
+        }
         gap: 15px;
-        width: 370px;
+        max-width: 50%;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         
-        button {
+        
+        .facebook-login {
+            background-color: #1877F2;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 0 auto;
             img {
                 width: 20px;
             }
         }
 
         .register-inputs {
+           padding-bottom: 10px;
             input{
+                background-color: white;
+                margin: 0 auto;
                 height: 32px;
+                max-width: 300px;
             }
         }
+
     }
 }

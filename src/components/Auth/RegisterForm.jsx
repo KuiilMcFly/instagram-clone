@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import instragramLogo from '../../assets/Instagram_logo.svg'
 import facebookLogo from "../../assets/facebook.png";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { auth } from "../../store/actions/handleAuth";
 
@@ -14,9 +12,11 @@ const [userName , setUserName ] = useState("");
 const [password , setPassword ] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(auth(email, password, true, userName));
-    console.log("email e password", email, password);
+    dispatch(auth(email, password, true, userName, name));
+    console.log("email e password", email, password, name, userName);
     setEmail("");
+    setName("");
+    setUserName("");
     setPassword("");
     console.log('ciao');
   };
@@ -25,7 +25,7 @@ const [password , setPassword ] = useState("");
     <form onSubmit={handleSubmit}>
       <img className="insta-logo" src={instragramLogo} alt="" />
       <h2>Iscriviti per vedere le foto e i video dei tuoi amici</h2>
-      <button>
+      <button className="facebook-login">
         <img src={facebookLogo} alt="" />
         <p>Accedi con Facebook</p>
       </button>
@@ -40,7 +40,7 @@ const [password , setPassword ] = useState("");
 
       <div className="register-inputs">
         <input
-          type="text"
+          type="email"
           placeholder="Numero di cellulare o indirizzo e-mail"  onChange={(e) => setEmail(e.target.value)}
         />
         <input type="text" placeholder="Nome e Cognome" onChange={(e) => setName(e.target.value)}/>
@@ -61,7 +61,7 @@ const [password , setPassword ] = useState("");
         </p>
       </div>
 
-      <button>Avanti</button>
+      <button className="complete-register">Avanti</button>
     </form>
   );
 };

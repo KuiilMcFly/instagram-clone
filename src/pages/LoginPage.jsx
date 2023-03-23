@@ -52,21 +52,11 @@ const handleSubmit = async (e) => {
   }
 };
 
-  const toggleNightMode = () => {
-    setIsNightMode(!isNightMode);
-    const modeType = isNightMode ? 'day' : 'night'; 
-    localStorage.setItem('mode' , modeType )
-   document.body.classList.toggle("night-mode");
-  };
+
 
   return (
     <div>
-      <button
-        className={`mode-button ${isNightMode ? "day-btn" : "night-btn"}`}
-        onClick={toggleNightMode}
-      >
-        Switch to {isNightMode ? "day" : "night"} mode
-      </button>
+   
       <div className="login-container">
         <div className="relative img-container">
           <div className="absolute phonecontainer">

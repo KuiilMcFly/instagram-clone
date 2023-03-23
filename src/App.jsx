@@ -8,11 +8,7 @@ import { Profile } from "./pages/Profile";
 
 function App() {
   
-  const theme = localStorage.getItem('mode')
-  if(theme && theme === 'night') {
-    document.body.classList.add("night-mode");
-    console.log(document.body.classList);
-  }
+
   return (
   <div className="App">
     <Routes>

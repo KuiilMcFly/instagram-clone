@@ -5,13 +5,42 @@
 }
 .container div {
   gap: 15px;
-  width: 370px;
+  max-width: 50%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
-.container div button img {
+.container div form {
+  margin-top: 100px;
+  border: solid 1px white;
+  padding: 20px;
+}
+.container div form h2 {
+  padding-bottom: 10px;
+}
+.container div form .complete-register {
+  padding: 10px;
+  color: white;
+  background-color: #1877F2;
+  border-radius: 15px;
+  margin-top: 10px;
+  width: 150px;
+}
+.container div .facebook-login {
+  background-color: #1877F2;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+.container div .facebook-login img {
   width: 20px;
 }
+.container div .register-inputs {
+  padding-bottom: 10px;
+}
 .container div .register-inputs input {
+  background-color: white;
+  margin: 0 auto;
   height: 32px;
+  max-width: 300px;
 }/*# sourceMappingURL=registerForm.css.map */

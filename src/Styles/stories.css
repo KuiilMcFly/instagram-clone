@@ -1,5 +1,5 @@
 .story-bar {
- 
+  z-index: 50;
   display: flex;
   gap: 10px;
 }
