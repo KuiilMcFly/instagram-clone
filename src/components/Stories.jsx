@@ -1,21 +1,14 @@
-import React from 'react';
-import '../Styles/stories.css'
-import SingleStory from './SingleStory';
+import "../Styles/stories.css";
+import SingleStory from "./SingleStory";
 
-
-const Stories = (dummyPosts) => {
+const Stories = ({ posts }) => {
   return (
-        <div className="story-bar">
-            <SingleStory dummyPosts={dummyPosts}/>
-            <SingleStory dummyPosts={dummyPosts}/>
-            <SingleStory dummyPosts={dummyPosts}/>
-            <SingleStory dummyPosts={dummyPosts}/>
-            <SingleStory dummyPosts={dummyPosts}/>
-            <SingleStory dummyPosts={dummyPosts}/>
-            <SingleStory dummyPosts={dummyPosts}/>
-            <SingleStory dummyPosts={dummyPosts}/>
-        </div>
-  )
-}
+    <div className="story-bar">
+      {posts?.slice(0,7).map((post) => (
+        <SingleStory key={post.id} username={post.username} user_image={post.user_image} />
+      ))}
+    </div>
+  );
+};
 
-export default Stories
+export default Stories;

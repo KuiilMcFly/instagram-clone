@@ -1,11 +1,11 @@
 import React from 'react'
 import propicPlaceHolder from '../assets/propic_placeholder.jpg';
 
-const SingleStory = (dummyPosts) => {
+const SingleStory = ({username, user_image}) => {
   return (
     <div className='single-story'>
-        <img src={propicPlaceHolder} alt="" />
-        <p>Profile name</p>
+        <img src={user_image} alt="" />
+        <p>{username}</p>
     </div>
   )
 }

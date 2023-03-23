@@ -5,7 +5,7 @@ import SuggestBox from './suggestBox';
 import { Navigate } from 'react-router-dom';
 
 
-const HomeRightBar = () => {
+const HomeRightBar = ({posts}) => {
 const email = localStorage.getItem('email');
 const username = email ? email.substring(0, email.indexOf('@')) : '';
 
@@ -22,7 +22,7 @@ const LogOut = () => {
   return (
     <div className="right-bar">
         <div className='profile-space'>
-            <img src={propicPlaceHolder} alt="" />
+            <img src={posts && posts[0] && posts[0].user_image} alt="" />
             <div className='name-nickname'>
                 <Link to={`/pages/profile/${username}`} state={{username}}><h3>{username}</h3></Link>
                 <p>name</p>
@@ -39,11 +39,11 @@ const LogOut = () => {
           <Link>Mostra tutti</Link>
         </div>
 
-        <SuggestBox/>
-        <SuggestBox/>
-        <SuggestBox/>
-        <SuggestBox/>
-        <SuggestBox/>
+        {posts?.slice(0,5).map((post) => (
+        <SuggestBox key={post.id} username={post.username} user_image={post.user_image} />
+      ))}
+
+     
     </div>
   )
 }

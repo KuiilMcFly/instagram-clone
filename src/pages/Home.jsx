@@ -9,16 +9,19 @@ import axios from 'axios';
 const Home = () => {
     
 
-const [dummyPosts, setDummyPosts] = useState([]);
+const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    async function fetchPosts() {
-      const resp = await axios.get("/src/data/MOCK_DATA.json");
-      const data = resp.data;
-      setDummyPosts(data);
-    }
-    fetchPosts();
-  }, []);
+useEffect(() => {
+  async function fetchPosts() {
+    const resp = await axios.get('https://instagram-clone-7ee14-default-rtdb.europe-west1.firebasedatabase.app/posts.json');
+    const data = resp.data;
+    
+    const dataArray = Object.entries(data).map(([key, value]) => ({id: key, firebaseId: key, ...value}));
+    setPosts(dataArray);
+  }
+  fetchPosts();
+}, []);
+
 
 
 
@@ -30,15 +33,15 @@ const [dummyPosts, setDummyPosts] = useState([]);
 
             <div className='central-bar'>
                 <Stories
-                dummyPosts={dummyPosts}
+                posts={posts}
                 />
                 <PostsSection
-                dummyPosts={dummyPosts}
+                posts={posts}
                
                 />
             </div>
             
-            <HomeRightBar/>
+            <HomeRightBar posts={posts}/>
         </div>
 
             

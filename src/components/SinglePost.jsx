@@ -6,7 +6,7 @@ import "../Styles/singlepost.css";
 import ModalComments from "./ModalComments";
 
 const SinglePost = ({ post }) => {
-  const { username, location, id, user_image, created_at, image, liked, comments, date } =
+  const { username, location, id, user_image, created_at, image, liked, comments, date, firebaseId } =
     post;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,12 +21,11 @@ const SinglePost = ({ post }) => {
       <div className="img-post-container">
         <img src={image} alt="" />
       </div>
-      <UserInteractions setIsOpen={setIsOpen} id={id} />
+      <UserInteractions setIsOpen={setIsOpen} id={id} firebaseId={firebaseId} />
 
       <div className="under-post">
         <p>
-          Piace a {liked && liked[0] && liked[0].username} e{" "}
-          {liked && liked.length > 1 && liked.length - 1}
+          Piace a {liked} persone
         </p>
         <p onClick={() => setIsOpen(true)}>
           Mostra tutti e i {comments && comments.length} commenti

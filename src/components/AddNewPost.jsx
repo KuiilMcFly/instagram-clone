@@ -35,7 +35,7 @@ export const AddNewPost = ({ setIsOpen }) => {
     const email = localStorage.getItem("email");
     const id = crypto.randomUUID();
     const username = email.substring(0, email.indexOf("@"));
-    const randomNumber = Math.floor(Math.random() * 100);
+    const randomNumber = Math.floor(Math.random() * 70);
     const user_image = `https://picsum.photos/id/${randomNumber}/800/600`;
     const location = getRandomCity();
     const today = new Date();
@@ -52,7 +52,7 @@ export const AddNewPost = ({ setIsOpen }) => {
       username,
       user_image,
       location,
-      liked: [],
+      liked: 0,
       comments: [],
       image: imgPath,
       email,

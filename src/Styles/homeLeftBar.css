@@ -21,8 +21,8 @@
 .left-bar button {
   text-decoration: none;
   color: white;
-  border: solid 1px #0F0F0F;
-  background-color: #0F0F0F;
+  border: solid 1px #0f0f0f;
+  background-color: #0f0f0f;
   font-size: 21px;
   display: flex;
   gap: 8px;
@@ -38,6 +38,12 @@
 }
 
 @media screen and (max-width: 1260px) {
+  .left-bar .left-bar-content {
+    border: 0;
+  }
+  button {
+    width: 30%;
+  }
   button span {
     display: none;
   }
