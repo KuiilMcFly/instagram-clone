@@ -6,7 +6,7 @@ import "../Styles/singlepost.css";
 import ModalComments from "./ModalComments";
 
 const SinglePost = ({ post }) => {
-  const { username, location, id, user_image, created_at, image, liked, comments, date, firebaseId } =
+  const { username, location, id, user_image, created_at, image, liked, comments, date, firebaseId, description } =
     post;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,8 +22,11 @@ const SinglePost = ({ post }) => {
         <img src={image} alt="" />
       </div>
       <UserInteractions setIsOpen={setIsOpen} id={id} firebaseId={firebaseId} />
-
+      
       <div className="under-post">
+        <p>
+          {description}
+        </p>
         <p>
           Piace a {liked} persone
         </p>
@@ -39,6 +42,7 @@ const SinglePost = ({ post }) => {
             comments={comments}
             username={username}
             date={date}
+            description={description}
           />
         )}
         <input className="comment" type="text" placeholder="Aggiungi un commento..." />
