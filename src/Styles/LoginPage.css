@@ -181,4 +181,19 @@ body {
 
 .logo-night {
   filter: invert(1);
+}
+
+.first-box {
+  border: solid white 2px;
+  padding: 20px;
+}
+
+.no-account {
+  border: solid 2px white;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.dwload {
+  margin: 10px 0;
 }/*# sourceMappingURL=LoginPage.css.map */

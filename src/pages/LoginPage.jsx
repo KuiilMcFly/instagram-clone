@@ -68,31 +68,36 @@ const handleSubmit = async (e) => {
         </div>
 
         <div className={isNightMode ? "text-night" : "text-day"}>
-        <img className={`insta-logo ${isNightMode ? 'logo-night' : '' } `} src={instaLogo} alt="" />
-          <LoginInput
-            handleEmail={handleEmail}
-            handlePassword={handlePassword}
-            handleSubmit={handleSubmit}
-            email={email}
-            password={password}
-          />
-          <div>
-            <div className="facebook-login">
-              <img src={facebookIcon} alt="" />
-              <p className={isNightMode ? "text-night" : "text-day"}>
-                Accedi con Facebook
-              </p>
-            </div>
+          <div className="first-box">
+              <img className={`insta-logo ${isNightMode ? 'logo-night' : '' } `} src={instaLogo} alt="" />
+                <LoginInput
+                  handleEmail={handleEmail}
+                  handlePassword={handlePassword}
+                  handleSubmit={handleSubmit}
+                  email={email}
+                  password={password}
+                />
+                <div>
+                  <div className="facebook-login">
+                    <img src={facebookIcon} alt="" />
+                    <p className={isNightMode ? "text-night" : "text-day"}>
+                      Accedi con Facebook
+                    </p>
+                  </div>
 
-            <p>Password dimenticata?</p>
+                  <p>Password dimenticata?</p>
+
+                </div>
+          </div>
 
             {error && <p>Password non valida</p>}
-            <p>
+
+
+            <p className="no-account">
               Non hai un account?<Link to="/register">Iscriviti</Link>
             </p>
-          </div>
           <div className="download-app ">
-            <p>Scarica l'applicazione</p>
+            <p className="dwload">Scarica l'applicazione</p>
             <div className="download-selector">
               <img src={googlePlay} alt="" style={{ width: "150px" }} />
               <img src={microsoftStore} alt="" style={{ width: "124px" }} />
