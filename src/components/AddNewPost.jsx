@@ -65,7 +65,10 @@ export const AddNewPost = ({ setIsOpen }) => {
       data
     );
     console.log(resp);
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload();
+
+    },1)
   };
 
   return (

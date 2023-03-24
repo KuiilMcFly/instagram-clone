@@ -32,6 +32,8 @@
     gap: 10px;
     img {
       width: 100%;
+      object-fit:contain;
+      max-height: 400px;
     }
     button {
         background-color:#1877F2 ;
