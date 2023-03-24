@@ -13,11 +13,13 @@
 
   .insta-logo {
     width: 150px;
+    
   }
   .insta-icon {
     width: 50px;
     position: absolute;
     opacity: 0;
+    filter: invert(1);
   }
   button {
     text-decoration: none;

@@ -17,6 +17,7 @@
   width: 50px;
   position: absolute;
   opacity: 0;
+  filter: invert(1);
 }
 .left-bar button {
   text-decoration: none;

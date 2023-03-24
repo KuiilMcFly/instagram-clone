@@ -41,7 +41,7 @@ const SinglePost = ({ post }) => {
             date={date}
           />
         )}
-        <input type="text" placeholder="Aggiungi un commento..." />
+        <input className="comment" type="text" placeholder="Aggiungi un commento..." />
       </div>
     </div>
   );

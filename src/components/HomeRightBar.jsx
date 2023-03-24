@@ -3,6 +3,7 @@ import propicPlaceHolder from '../assets/propic_placeholder.jpg';
 import { Link } from 'react-router-dom';
 import SuggestBox from './suggestBox';
 import { Navigate } from 'react-router-dom';
+import { getRandomImage } from '../data/randomImage';
 
 
 const HomeRightBar = ({posts}) => {
@@ -22,7 +23,7 @@ const LogOut = () => {
   return (
     <div className="right-bar">
         <div className='profile-space'>
-            <img src={posts && posts[0] && posts[0].user_image} alt="" />
+            <img src={getRandomImage()} alt="" />
             <div className='name-nickname'>
                 <Link to={`/pages/profile/${username}`} state={{username}}><h3>{username}</h3></Link>
                 <p>name</p>
