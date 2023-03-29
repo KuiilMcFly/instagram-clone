@@ -32,6 +32,7 @@ export const AddNewPost = ({ setIsOpen }) => {
     const imgPath = `https://firebasestorage.googleapis.com/v0/b/instagram-clone-7ee14.appspot.com/o/${encodeURIComponent(
       imageRef.fullPath
     )}?alt=media`;
+    
     const email = localStorage.getItem("email");
     const id = crypto.randomUUID();
     const username = email.substring(0, email.indexOf("@"));
