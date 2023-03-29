@@ -21,7 +21,7 @@ const ModalComments = ({ setIsOpen, user_image, postImage, comments, username, d
               <UserInteractions/>
           </div>
       </div>
-      <button onClick={() => setIsOpen(false)}>X</button>
+      <button className="modalbutton" onClick={() => setIsOpen(false)}>X</button>
     </div>
   );
 };

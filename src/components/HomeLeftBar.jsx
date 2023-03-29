@@ -11,7 +11,14 @@ import { BsCameraReels } from "react-icons/bs";
 import { AddNewPost } from "./AddNewPost";
 import { useState } from "react";
 import instagramIcon from "../assets/instagram-seeklogo.com.svg"
+
+
+
 const HomeLeftBar = () => {
+
+const email = localStorage.getItem('email');
+const username = email ? email.substring(0, email.indexOf('@')) : '';
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -49,7 +56,7 @@ const HomeLeftBar = () => {
          <span>Crea</span>
         </button>
         <button>
-          <Link to={"/pages/Profile"}>
+          <Link to={`/pages/profile/${username}`} state={{username}}>
            <span>Profilo</span>
           </Link>
         </button>
