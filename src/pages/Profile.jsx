@@ -5,6 +5,7 @@ import EvidenceStories from '../components/EvidenceStories';
 import ProfilePosts from '../components/ProfilePosts';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
+import { getRandomImage } from '../data/randomImage';
 
 export const Profile = () => {
    const [profileData,setProfileData] =  useState();
@@ -26,7 +27,7 @@ export const Profile = () => {
         <HomeLeftBar/>
         <div className='col-01'>
             <div className='profile-info'>
-                <img className='proPicImg' src="https://picsum.photos/id/237/200/300" alt="" />
+                <img className='proPicImg' src={getRandomImage()} alt="" />
                 <div className='info-bio'>
                     <div className='nickname-setting'>
                         <p>{username}</p>
